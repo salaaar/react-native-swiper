@@ -786,7 +786,7 @@ export default class extends Component {
     }
   }
 
-  renderScrollView = pages => {
+  renderScrollView = (pages =[]) => {
     return (
       <ScrollView
         ref={this.refScrollView}
@@ -799,7 +799,7 @@ export default class extends Component {
         onScrollEndDrag={this.onScrollEndDrag}
         style={this.props.scrollViewStyle}
       >
-        {I18nManager.isRTL ? pages.reverse() : pages}
+      {pages}
       </ScrollView>
     )
   }
